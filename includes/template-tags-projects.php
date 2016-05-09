@@ -619,7 +619,7 @@ function the_hrb_project_remain_days( $post_id = 0, $alt_output = false ) {
 	} elseif ( $days > 0 ) {
 
 		$days_left = (int) $days;
-		$days_left_label = _n( 'day', 'days', $days, APP_TD );
+		$days_left_label = _n( 'Día', 'Días', $days, APP_TD );
 
 	} else {
 

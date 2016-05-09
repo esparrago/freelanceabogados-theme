@@ -11,10 +11,15 @@
 				<div class="single-project-header row">
 
 					<div class="budget-deadline large-6 small-7 columns cf">
+						<?php 
+						/*
 						<div class="project-budget"  data-tooltip title="<?php echo __( 'Project Budget', APP_TD ); ?>">
 							<span class="budget"><?php the_hrb_project_budget(); ?></span>
 							<span class="budget-type"><?php echo the_hrb_project_budget_type(); ?></span>
 						</div>
+						*/
+						?>
+
 
 						<?php $remain_days = get_the_hrb_project_remain_days(); ?>
 
@@ -36,10 +41,11 @@
 			<article class="project">
 
 				<div class="article-header row collapse">
-
+					<?php /*
 					<div class="large-3 small-5 columns">
 						<span class="projects-starred"><?php the_hrb_project_faves_link(); ?></span>
 					</div>
+					*/?>
 
 					<div class="large-4 small-6 columns add-ons">
 						<?php the_hrb_project_addons(); ?>
@@ -116,7 +122,7 @@
 
 			<section class="active">
 
-				<p class="title"><a href="#details"><?php echo __( 'Details', APP_TD ); ?></a></p>
+				<p class="title"><a href="#details"><?php echo __( 'Detalles', APP_TD ); ?></a></p>
 
 				<div class="content" data-section-content>
 
@@ -128,7 +134,7 @@
 
 			<section>
 
-				<p class="title"><a href="#proposals"><?php echo sprintf( __( 'Proposals (%s)', APP_TD ), appthemes_get_post_total_bids( get_the_ID() ) ); ?></a></p>
+				<p class="title"><a href="#proposals"><?php echo sprintf( __( 'Ofertas (%s)', APP_TD ), appthemes_get_post_total_bids( get_the_ID() ) ); ?></a></p>
 
 				<div class="content" data-section-content>
 
@@ -140,6 +146,9 @@
 
 			<?php if ( $hrb_options->projects_clarification ): ?>
 
+
+			<?php
+			/*
 			<section>
 
 				<p class="title"><a href="#clarification"><?php echo sprintf( __( 'Clarification Board (%s)', APP_TD ), get_comments_number() ); ?></a></p>
@@ -149,6 +158,10 @@
 					<?php appthemes_load_template( 'single-project-section-clarification.php' ); ?>
 
 				</div>
+
+			</section>
+			*/
+			?>
 
 			<?php endif; ?>
 
