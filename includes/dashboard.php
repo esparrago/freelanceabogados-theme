@@ -19,10 +19,10 @@ function hrb_maybe_warn_no_public_email() {
 	$user = wp_get_current_user();
 
 	if ( empty( $user->hrb_email ) ) {
-		$profile_link = html_link( appthemes_get_edit_profile_url(), __( 'Update Profile', APP_TD ) );
+		$profile_link = html_link( appthemes_get_edit_profile_url(), __( 'Actualizar perfil', APP_TD ) );
 
 		if ( user_can( $user->ID, 'edit_projects' ) && user_can( $user->ID, 'edit_bids' ) ) {
-			appthemes_display_notice( 'warning', sprintf( __( '<strong>Note:</strong> Before you accept or apply to a project you\'ll need to provide a public email. %s.', APP_TD ), $profile_link ) );
+			appthemes_display_notice( 'warning', sprintf( __( '<strong>Nota:</strong> Antes de aceptar o aplicar a un proyecto, tienes que proporcionar un email público. </br> %s.', APP_TD ), $profile_link ) );
 		} else {
 
 			if ( user_can( $user->ID, 'edit_projects' ) ) {

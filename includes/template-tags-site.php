@@ -581,13 +581,13 @@ function the_hrb_search_dropdown( $attributes = '' ) {
 function the_hrb_projects_sort_dropdown( $base_link = '', $attributes = '' ) {
 
 	$items = array(
-		'default'	=> __( 'Newest', APP_TD ),
-		'urgent'	=> __( 'Urgent', APP_TD ),
-		'popularity'=> __( 'Popularity', APP_TD ),
-		'expiring'	=> __( 'Ending Soon', APP_TD ),
-		'budget'	=> __( 'Budget', APP_TD ),
-		'title'		=> __( 'Alphabetical', APP_TD ),
-		'rand'		=> __( 'Random', APP_TD ),
+		'default'	=> __( 'Nuevo', APP_TD ),
+		'urgent'	=> __( 'Urgencia', APP_TD ),
+		'popularity'=> __( 'Popularidad', APP_TD ),
+		'expiring'	=> __( 'Finaliza pronto', APP_TD ),
+		/*'budget'	=> __( 'Budget', APP_TD ),*/
+		'title'		=> __( 'Alfabético', APP_TD ),
+		'rand'		=> __( 'Aleatorio', APP_TD ),
 	);
 
 	if ( is_archive() ) {
@@ -647,7 +647,7 @@ function the_hrb_filter_dropdown( $options, $items ) {
 	$defaults = array(
 		'id'			=> 'filter',		// should contain an unique ID to help identify the filter type on the 'apply_filters()' hook, below
 		'name'			=> 'drop-sort-' . uniqid(),
-		'label'			=> __( 'Sort By', APP_TD ),
+		'label'			=> __( 'Filtrar por', APP_TD ),
 		'base_link'		=> '',
 		'query_var'		=> 'orderby',		// the query var to retrieve the active item from
 		'hide_selected'	=> true,			// hide selected item from dropdown list

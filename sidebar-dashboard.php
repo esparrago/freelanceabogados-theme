@@ -5,7 +5,7 @@
 
 		<?php appthemes_before_sidebar_widgets( 'dashboard' ); ?>
 
-		<h3><?php echo sprintf( __( 'Welcome %s', APP_TD ), $dashboard_user->display_name ); ?></h3>
+		<h3><?php echo sprintf( __( 'Hola, %s', APP_TD ), $dashboard_user->display_name ); ?></h3>
 
 		<div class="dashboard-user-meta cf">
 			<div class="user-gravatar"><?php the_hrb_user_gravatar( $dashboard_user->ID, 75 ); ?></div>

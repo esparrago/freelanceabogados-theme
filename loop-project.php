@@ -11,7 +11,7 @@
 
 			<?php elseif ( ! is_search() && ! is_archive() ): ?>
 
-				<h3><?php echo __( 'Ultimas Consultas', APP_TD ); ?></h3>
+				<h3 class="ultim-con"><?php echo __( 'Últimas Consultas', APP_TD ); ?></h3>
 
 			<?php endif; ?>
 

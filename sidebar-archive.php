@@ -40,7 +40,7 @@
 
 				<div id="refine-location">
 
-					<h4><?php _e ( 'ubicación', APP_TD ); ?></h4>
+					<h4><?php _e ( 'Ubicación', APP_TD ); ?></h4>
 
 					<?php if ( ( ! empty( $_REQUEST['st'] ) && HRB_ROLE_FREELANCER == $_REQUEST['st'] ) || get_query_var('archive_freelancer') ): ?>
 

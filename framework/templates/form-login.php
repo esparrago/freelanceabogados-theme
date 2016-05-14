@@ -4,14 +4,14 @@
 
 		<div class="form-field">
 			<label>
-				<?php _e( 'Username:', APP_TD ); ?>
+				<?php _e( 'Nombre de usuario o email:', APP_TD ); ?>
 				<input type="text" name="log" class="text regular-text required" tabindex="2" id="login_username" value="" />
 			</label>
 		</div>
 
 		<div class="form-field">
 			<label>
-				<?php _e( 'Password:', APP_TD ); ?>
+				<?php _e( 'Contraseña:', APP_TD ); ?>
 				<input type="password" name="pwd" class="text regular-text required" tabindex="3" id="login_password" value="" />
 			</label>
 		</div>
@@ -24,11 +24,11 @@
 
 		<div class="form-field">
 				<input type="checkbox" name="rememberme" class="checkbox" tabindex="4" id="rememberme" value="forever" />
-				<label for="rememberme"><?php _e( 'Remember me', APP_TD ); ?></label>
+				<label for="rememberme"><?php _e( 'Recordarme', APP_TD ); ?></label>
 		</div>
 
 		<div class="form-field">
-			<a href="<?php echo appthemes_get_password_recovery_url(); ?>"><?php _e( 'Lost your password?', APP_TD ); ?></a>
+			<a href="<?php echo appthemes_get_password_recovery_url(); ?>"><?php _e( 'Recuperar contraseña', APP_TD ); ?></a>
 		</div>
 
 		<?php wp_register( '<div class="form-field" id="register">', '</div>' ); ?>

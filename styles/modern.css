@@ -14,7 +14,7 @@
  /* =========== [ 1. LAYOUT, GENERAL ] =========== */
 
 a, a:hover {
-	color: #81ba53;
+	color: #00BFBF;
 }
 
 .button,
@@ -50,12 +50,12 @@ a, a:hover {
 
 #navigation li :not(.button):hover {
 	text-decoration: none;
-	background-color: #7dc057;
+	background-color: #06AEAE;
 	opacity: 1;
 }
 
 .project > h2 a {
-	color: #415157;
+	color: white;
 }
 
 .projects-section i,
@@ -71,10 +71,11 @@ a, a:hover {
 }
 
 .full-width .content-header {
-	background-color: #554b82;
+	background-color: #F2F2F2;
 }
 
 /* =========== [ 2. HEADER ] =========== */
+
 
 .top-bar {
 	background-color: #fff;
@@ -85,15 +86,15 @@ a, a:hover {
 .main-navigation,
 .lower-top-bar,
 .main-navigation .top-bar.expanded .title-area{
-	background-color: #96d25f;
+	background-color: #00BFBF;
 }
 
 .lower-top-bar li a:not(.button) {
-	background: #96d25f;
+	background: #00BFBF;
 }
 
 .lower-top-bar li a {
-	border-right: 1px solid #76b83e;
+	border-right: 1px solid #0AAAAA;
 }
 
 /* below navigation widget */
@@ -107,19 +108,19 @@ a, a:hover {
 
 .search-button button,
 .sidebar-archive .section-head input[type="submit"] {
-    background: url('../images/icon-search.png') #564885 center center no-repeat;
+    background: url('../images/icon-search.png') #333 center center no-repeat;
 }
 
 .search-button button:hover,
 .sidebar-archive .section-head input:hover {
-	background-color: #38315a;
+	background-color: #333;
 }
 
 /* responsive menus */
 
 .top-navigation .top-bar .toggle-topbar a span {
-	-webkit-box-shadow: 0 10px 0 1px #96d25f, 0 16px 0 1px #96d25f, 0 22px 0 1px #96d25f;
-	box-shadow: 0 10px 0 1px #96d25f, 0 16px 0 1px #96d25f, 0 22px 0 1px #96d25f;
+	-webkit-box-shadow: 0 10px 0 1px #00BFBF, 0 16px 0 1px #00BFBF, 0 22px 0 1px #00BFBF;
+	box-shadow: 0 10px 0 1px #00BFBF, 0 16px 0 1px #00BFBF, 0 22px 0 1px #00BFBF;
 }
 
 .main-navigation .top-bar.expanded .toggle-topbar a span {
@@ -144,7 +145,8 @@ a, a:hover {
 }
 
 .project > h2 {
-	background-color: #dfe4ed;
+	background-color: #757575;
+	color: white;
 }
 
 .project-skills .label,
@@ -157,7 +159,7 @@ a, a:hover {
 /* project featured loop */
 
 .featured.project > h2:hover {
-	background-color: #473f72;
+	background-color: #757575;
 }
 
 .featured > h2 {
@@ -349,18 +351,19 @@ article.fourzerofour a {
 /* =========== [ 5. FORMS ] =========== */
 
 form input[type="submit"] {
-	background-color: #96d25f;
+	background-color: #00BFBF;
 	color: #fff;
 }
 
 form input[type="submit"].button:not(.secondary):hover:not(:disabled),
 form input[type="submit"]:hover {
-	background-color: #66A046;
+	background-color: #00B3B3;
 }
 
 .log-in .register-box {
-	background-color: #81bf47;
-	color: #fff;
+	background-color: white;
+	color: black;
+	padding-top: 50px;
 }
 
 .log-in .register-box .button {
@@ -441,7 +444,7 @@ ol.progtrckr li.progtrckr-todo:before {
 /* =========== [ 6. SIDEBAR ] =========== */
 
 .sidebar-widget-wrap > h3 {
-	background-color: #554b82;
+	background-color: #00BFBF;
 	color: #fff;
 }
 

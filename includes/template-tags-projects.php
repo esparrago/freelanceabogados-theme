@@ -232,7 +232,7 @@ function the_hrb_project_proposals_count( $post_id = 0, $before = '', $after = '
 
 	$proposals = appthemes_get_post_total_bids( $post_id );
 
-	echo $before . sprintf( _n( '1 Proposal', '%d Proposals', $proposals, APP_TD ), $proposals ) . $after;
+	echo $before . sprintf( _n( '1 Oferta', '%d Ofertas', $proposals, APP_TD ), $proposals ) . $after;
 }
 
 /**
@@ -540,7 +540,7 @@ function get_the_hrb_proposal_posted_time_ago( $proposal ) {
  * Outputs the formatted human time ago for a proposal.
  */
 function the_hrb_proposal_posted_time_ago( $proposal, $before = '', $after = '' ) {
-	echo $before . sprintf( __( '%s ago', APP_TD ) , get_the_hrb_proposal_posted_time_ago( $proposal ) ) . $after ;
+	echo $before . sprintf( __( 'Hace %s', APP_TD ) , get_the_hrb_proposal_posted_time_ago( $proposal ) ) . $after ;
 }
 
 /**
@@ -555,14 +555,14 @@ function get_the_hrb_project_posted_time_ago( $post_id = 0 ) {
  * Retrieves the human time ago for a listing.
  */
 function the_hrb_posted_time_ago( $time_start, $before = '', $after = '' ) {
-	echo $before . sprintf( __( '%s ago', APP_TD ) , human_time_diff( $time_start, current_time('timestamp') ) ) . $after ;
+	echo $before . sprintf( __( 'Hace %s', APP_TD ) , human_time_diff( $time_start, current_time('timestamp') ) ) . $after ;
 }
 
 /**
  * Outputs the formatted human time ago for a listing.
  */
 function the_hrb_project_posted_time_ago( $post_id = 0, $before = '', $after = '' ) {
-	echo $before . sprintf( __( '%s ago', APP_TD ) , get_the_hrb_project_posted_time_ago( $post_id ) ) . $after ;
+	echo $before . sprintf( __( 'Hace %s', APP_TD ) , get_the_hrb_project_posted_time_ago( $post_id ) ) . $after ;
 }
 
 /**
@@ -796,7 +796,7 @@ function hrb_get_projects_locations() {
 	asort( $locations );
 
 	if ( $has_remote ) {
-		$locations['remote'] = __( 'Remote', APP_TD );
+		$locations['remote'] = __( 'A distancia', APP_TD );
 	}
 
     return $locations;
@@ -811,7 +811,7 @@ function get_the_hrb_project_location( $post_id = 0 ) {
 	$address_pref = get_post_meta( $post_id, '_hrb_location_type', true );
 
 	if ( 'remote' == $address_pref ) {
-		return __( 'Remote', APP_TD );
+		return __( 'A distancia', APP_TD );
 	}
 
 	$address = get_post_meta( $post_id, '_hrb_location', true );
