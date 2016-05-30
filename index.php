@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Template Name: Projects & Freelancers Listings
@@ -23,7 +24,8 @@
 
 <?php else : ?>
 	<!-- links -->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>	
+   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+	
    	<style type="text/css">
    	.large-8.columns.top-navigation-header, .main-navigation {
 
@@ -82,14 +84,18 @@
    	        <div class="container">
 
    	            <div class="row">
-   	                <div class="col-lg-12">
+   	                <div class="col-lg-12">               
    	                    <div class="intro-message wow fadeIn">
-   	                        <h1>Soluciones legales eficientes</h1>
-   	                        <h3>Contrata Abogados o encuentra trabajo como abogado</h3>
-   	                        <hr class="intro-divider">
+                               <div class="img-intro">
+                                 <img class="web" src="<?php bloginfo('stylesheet_directory'); ?>/images/home_info-01.svg" alt="" width="90%">
+                                 <img class="mobile" src="<?php bloginfo('stylesheet_directory'); ?>/images/home_mob_info.svg" alt="">
+                               </div>
+   	                        <h1>FREELANCE ABOGADOS</h1>
+   	                        <h3>Soluciones legales eficientes</h3>
+   	                        <!--<hr class="intro-divider"> -->
    	                        <ul class="list-inline intro-social-buttons">
    	                            <li>
-   	                                <a href="wp-login.php?action=register" class="btn btn-success btn-lg"> <span class="network-name">Empieza Gratis Hoy</span></a>
+   	                                <a href="wp-login.php?action=register" class="btn btn-success btn-lg"> <span class="network-name">!Empieza gratis hoy!</span></a>
    	                            </li>
    	                        </ul>
    	                    </div>
@@ -110,11 +116,12 @@
    	        <div class="container">
    	            <div class="row">
    	                <div class="col-lg-offset-2 col-lg-8 col-sm-12 text-center wow fadeInUp">
+                          <img class="logo-circle" src="<?php bloginfo('stylesheet_directory'); ?>/images/fa_Logosimbolo.png">
    	                    <hr class="section-heading-spacer center-section-line">
    	                    <div class="clearfix"></div>
    	                    <h2 class="section-heading text-center">DERECHO SIN CORBATA</h2>
    	                    <p class="lead text-center">Somos una PLATAFORMA DE CROWDSOURCING Online que conecta abogados y clientes en un mismo escenario con la finalidad de proveer soluciones JURÍDICAS prácticas, sencillas y rápidas provenientes de una Creemos en soluciones legales eficientes a un precio razonable, sin nueva generación de ABOGADOS modernos, precisos, determinados e independientes. tramitología ni perdida de tiempo.</p>
-   	                    <div class="btn btn-success">Empieza Gratis Hoy</div>
+   	                     <a href="wp-login.php?action=register" class="btn btn-success btn-lg btn-txt-black"> <span class="network-name">!Empieza gratis hoy!</span></a>
    	                </div>
    	            </div>
 
@@ -129,14 +136,11 @@
    	        <div class="container">
 
    	            <div class="row">
-   	                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6 wow fadeInRight">
-   	                    <hr class="section-heading-spacer">
-   	                    <div class="clearfix"></div>
-   	                    <h2 class="section-heading">Para Abogados</h2>
-   	                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in neque a velit sodales ullamcorper ac et erat. Vestibulum at venenatis tellus. Nulla ullamcorper ligula id scelerisque posuere. Nulla pharetra mauris tellus, sit amet dapibus sapien auctor eget. Aenean ultricies nisl luctus tortor dignissim, ut semper mi scelerisque. Donec eget ex a felis pulvinar porttitor at et ligula. Nulla elementum non purus sit amet porttitor.</p>
-   	                </div>
-   	                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-   	                    <img class="img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/images/abogados.png" alt="">
+   	                <div class="col-lg-12 col-sm-12 wow fadeInRight  text-center">
+   	                    <h2 class="section-heading text-left name-big">Abogado</h2>
+   	                    <p class="lead text-left">¿Eres un abogado y estas buscando un nuevo método de trabajo?</p>
+                          <img class="infografia-rol web" src="<?php bloginfo('stylesheet_directory'); ?>/images/home_info-02.svg" alt="" width="90%">
+                          <img class="infografia-rol mobile" src="<?php bloginfo('stylesheet_directory'); ?>/images/home_mob_info_01.svg" alt="" width="90%">
    	                </div>
    	            </div>
 
@@ -150,17 +154,15 @@
 
    	        <div class="container">
 
-   	            <div class="row">
-   	                <div class="col-lg-5 col-sm-6 wow fadeInLeft">
-   	                    <hr class="section-heading-spacer">
-   	                    <div class="clearfix"></div>
-   	                    <h2 class="section-heading">Para Personas y Empresas</h2>
-   	                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in neque a velit sodales ullamcorper ac et erat. Vestibulum at venenatis tellus. Nulla ullamcorper ligula id scelerisque posuere. Nulla pharetra mauris tellus, sit amet dapibus sapien auctor eget. Aenean ultricies nisl luctus tortor dignissim, ut semper mi scelerisque. Donec eget ex a felis pulvinar porttitor at et ligula. Nulla elementum non purus sit amet porttitor.</p>
-   	                </div>
-   	                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-   	                    <img class="img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/images/clientes.png" alt="">
-   	                </div>
-   	            </div>
+                 <div class="row">
+                     <div class="col-lg-12 col-sm-12 wow fadeInRight text-center">
+                          <h2 class="section-heading text-left name-big">Cliente</h2>
+                          <p class="lead text-left">¿Eres cliente y estas buscando soluciones legales eficiente para tí o tu negocio?</p>
+                            <img class="infografia-rol web" src="<?php bloginfo('stylesheet_directory'); ?>/images/home_info-03.svg" alt="" width="90%">
+                             <img class="infografia-rol mobile" src="<?php bloginfo('stylesheet_directory'); ?>/images/home_mob_info_02.svg" alt="" width="90%">
+                     </div>
+                  </div>
+
 
    	        </div>
    	        <!-- /.container -->
@@ -174,10 +176,10 @@
    	        <div class="container">
 
    	            <div class="row">
-   	                <div class="col-lg-6">
+   	                <div class="col-lg-6 text-center">
    	                    <h2>Encuentranos tambien en:</h2>
    	                </div>
-   	                <div class="col-lg-6">
+   	                <div class="col-lg-6 text-center">
    	                    <ul class="list-inline banner-social-buttons">
    	                        <li>
    	                            <a href="#" class="btn btn-default btn-lg social-icons"><i class="fa fa-twitter fa-fw"></i></a>
@@ -202,7 +204,7 @@
    	        <div class="container">
    	            <div class="row">
    	                <div class="col-lg-12">
-   	                    <ul class="list-inline">
+   	                    <ul class="list-inline text-center list-black">
    	                        <li>
    	   		                    <a href="wp-login.php">ingresar</a>
    	   		                </li>
@@ -219,7 +221,7 @@
    	                            <a href="#contact">Terminos y condiciones</a>
    	                        </li>
    	                    </ul>
-   	                    <p class="copyright text-muted small">Copyright &copy; Freelance Abogados 2016. Todos los derechos reservados</p>
+   	                    <p class="copyright text-muted small text-center">Copyright &copy; Freelance Abogados 2016. Todos los derechos reservados</p>
    	                </div>
    	            </div>
    	        </div>
