@@ -115,12 +115,11 @@
 
    	        <div class="container">
    	            <div class="row">
-   	                <div class="col-lg-offset-2 col-lg-8 col-sm-12 text-center wow fadeInUp">
+   	                <div class="col-lg-offset-3 col-lg-6 col-sm-12 text-center wow fadeInUp">
                           <img class="logo-circle" src="<?php bloginfo('stylesheet_directory'); ?>/images/fa_Logosimbolo.png">
-   	                    <hr class="section-heading-spacer center-section-line">
-   	                    <div class="clearfix"></div>
    	                    <h2 class="section-heading text-center">DERECHO SIN CORBATA</h2>
-   	                    <p class="lead text-center">Somos una PLATAFORMA DE CROWDSOURCING Online que conecta abogados y clientes en un mismo escenario con la finalidad de proveer soluciones JURÍDICAS prácticas, sencillas y rápidas provenientes de una Creemos en soluciones legales eficientes a un precio razonable, sin nueva generación de ABOGADOS modernos, precisos, determinados e independientes. tramitología ni perdida de tiempo.</p>
+   	                    <p class="lead justify">Somos una PLATAFORMA DE CROWDSOURCING Online que conecta abogados y clientes en un mismo escenario con la finalidad de proveer soluciones JURÍDICAS prácticas, sencillas y rápidas provenientes de una Creemos en soluciones legales eficientes a un precio razonable, sin nueva generación de ABOGADOS modernos, precisos, determinados e independientes. tramitología ni perdida de tiempo.</p>
+                          <br>
    	                     <a href="wp-login.php?action=register" class="btn btn-success btn-lg btn-txt-black"> <span class="network-name">!Empieza gratis hoy!</span></a>
    	                </div>
    	            </div>
@@ -157,7 +156,7 @@
                  <div class="row">
                      <div class="col-lg-12 col-sm-12 wow fadeInRight text-center">
                           <h2 class="section-heading text-left name-big">Cliente</h2>
-                          <p class="lead text-left">¿Eres cliente y estas buscando soluciones legales eficiente para tí o tu negocio?</p>
+                          <p class="lead text-left">¿Eres cliente y estas buscando soluciones legales eficientes para tí o tu negocio?</p>
                             <img class="infografia-rol web" src="<?php bloginfo('stylesheet_directory'); ?>/images/home_info-03.svg" alt="" width="90%">
                              <img class="infografia-rol mobile" src="<?php bloginfo('stylesheet_directory'); ?>/images/home_mob_info_02.svg" alt="" width="90%">
                      </div>
@@ -177,7 +176,7 @@
 
    	            <div class="row">
    	                <div class="col-lg-6 text-center">
-   	                    <h2>Encuentranos tambien en:</h2>
+   	                    <h2>Encuentranos también en:</h2>
    	                </div>
    	                <div class="col-lg-6 text-center">
    	                    <ul class="list-inline banner-social-buttons">
@@ -206,7 +205,7 @@
    	                <div class="col-lg-12">
    	                    <ul class="list-inline text-center list-black">
    	                        <li>
-   	   		                    <a href="wp-login.php">ingresar</a>
+   	   		                    <a href="wp-login.php">Ingresar</a>
    	   		                </li>
    	                        <li class="footer-menu-divider">&sdot;</li>
    	                        <li>
@@ -214,7 +213,7 @@
    	                        </li>
    	                        <li class="footer-menu-divider">&sdot;</li>
    	                        <li>
-   	                            <a href="#services">Como Funciona</a>
+   	                            <a href="#services">Como funciona</a>
    	                        </li>
    	                        <li class="footer-menu-divider">&sdot;</li>
    	                        <li>
