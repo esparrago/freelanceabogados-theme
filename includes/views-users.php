@@ -507,7 +507,7 @@ class HRB_Edit_Profile_Extra_Meta_Box extends APP_User_Meta_Box {
 			'templates' => array('edit-profile.php'),
 		);
 
-		parent::__construct( 'app_profile_details', __( 'Additional Details', APP_TD ), $args );
+		parent::__construct( 'app_profile_details', __( 'Detalles adicionales', APP_TD ), $args );
 	}
 
 	/**
@@ -527,39 +527,51 @@ class HRB_Edit_Profile_Extra_Meta_Box extends APP_User_Meta_Box {
 
 		$fields = array(
 			array(
-				'title' => __( 'Your Currency', APP_TD ),
+				'title' => __( 'Moneda Preferida', APP_TD ),
 				'type'  => 'select',
 				'name'  => 'hrb_currency',
 				'choices' => $currencies,
-			),
-			array(
-				'title' => __( 'Rate per Hour', APP_TD ),
-				'type'  => 'text',
-				'name'  => 'hrb_rate',
-				'extra' => array ( 'size' => 3, 'class' => 'short-field' ),
-				'desc'  => __( 'p/ Hour', APP_TD ),
-			),
-			array(
-				'title' => __( 'Skills', APP_TD ),
-				'type'  => 'custom',
-				// name used for easier handling since terms are stored in 'hrb_user_skills'
-				'name'  => 'tax_input['.HRB_PROJECTS_SKILLS.']',
-				'render'  => array( $this, 'render_skills' ),
 			),
 		);
 
 		if ( ! $hrb_options->local_users ) {
 
 			$location = array(
-				'title' => __( 'Location', APP_TD ),
+				'title' => __( 'Ubicación', APP_TD ),
 				'type'  => 'text',
 				'name'  => 'hrb_location',
-				'desc'  => __( 'Your Location', APP_TD ),
+				'desc'  => __( 'Tu ubicación', APP_TD ),
 				'extra' => array( 'id' => 'location', 'data-geo' => 'formatted_address', 'class' => 'regular-text' ),
 			);
 			array_unshift( $fields , $location );
 
 		}
+
+		if ( current_user_can('freelancer') ) {
+
+			$rate = array(
+				'title' => __( 'Tasa por hora', APP_TD ),
+				'type'  => 'text',
+				'name'  => 'hrb_rate',
+				'extra' => array ( 'size' => 3, 'class' => 'short-field' ),
+				'desc'  => __( 'Precio hora de trabajo', APP_TD ),
+			);
+			array_unshift( $fields , $rate );
+		}
+
+
+		if ( current_user_can('freelancer') ) {
+
+			$skills = array(
+				'title' => __( 'Habilidades', APP_TD ),
+				'type'  => 'custom',
+				// name used for easier handling since terms are stored in 'hrb_user_skills'
+				'name'  => 'tax_input['.HRB_PROJECTS_SKILLS.']',
+				'render'  => array( $this, 'render_skills' ),
+			);
+			array_unshift( $fields , $skills );
+		}
+
 		return apply_filters( 'hrb_profile_base_fields', $fields );
 	}
 
@@ -672,7 +684,7 @@ class HRB_Edit_Profile_Social_Meta_Box extends APP_User_Meta_Box {
 			'templates' => array('edit-profile.php'),
 		);
 
-		parent::__construct( 'app_profile_social', __( 'Social Details', APP_TD ), $args );
+		parent::__construct( 'app_profile_social', __( 'Detalles redes sociales', APP_TD ), $args );
 	}
 
 	/**
@@ -685,31 +697,31 @@ class HRB_Edit_Profile_Social_Meta_Box extends APP_User_Meta_Box {
 
 		$fields = array(
 			array(
-				'title' => __( 'Public Email', APP_TD ),
+				'title' => __( 'Email público', APP_TD ),
 				'type'  => 'text',
 				'name'  => 'hrb_email',
 				'extra' => array(
 					'class' => 'required important-field regular-text',
 				),
-				'desc'  => __( 'Your public email (shared only with project participants)', APP_TD ),
+				'desc'  => __( 'Tu email público (solo compartido con los participantes del proyecto)', APP_TD ),
 			),
 			array(
-				'title' => __( 'LinkedIn URL', APP_TD ),
+				'title' => __( 'LinkedIn', APP_TD ),
 				'type'  => 'text',
 				'name'  => 'hrb_linkedin',
-				'desc'  => __( 'Your LinkedIn ID', APP_TD ),
+				'desc'  => __( 'Tu ID de LinkedIn', APP_TD ),
 			),
 			array(
 				'title' => __( 'Twittter ', APP_TD ),
 				'type'  => 'text',
 				'name'  => 'hrb_twitter',
-				'desc'  => __( 'Your Twitter URL', APP_TD ),
+				'desc'  => __( 'Tu URL de Twittter', APP_TD ),
 			),
 			array(
 				'title' => __( 'Facebook ', APP_TD ),
 				'type'  => 'text',
 				'name'  => 'hrb_facebook',
-				'desc'  => __( 'Your Facebook URL', APP_TD ),
+				'desc'  => __( 'Tu URL de Facebook', APP_TD ),
 			),
 		);
 		return apply_filters( 'hrb_profile_social_fields', $fields );
@@ -751,16 +763,16 @@ class HRB_Edit_Profile_Account_Meta_Box extends APP_User_Meta_Box {
 	 * @uses apply_filters() Calls 'hrb_profile_account_fields'
 	 *
 	 */
-	public function form_fields() {
-		$fields = array(
-			array(
-				'title' => __( 'Balance', APP_TD ),
-				'type'  => 'text',
-				'name'  => 'hrb_credits',
-				'desc'  => __( 'Credits', APP_TD ),
-				'extra' => array( 'size' => '5', 'class' => 'short-field' ),
-			),
-		);
-		return apply_filters( 'hrb_profile_account_fields', $fields );
-	}
+	// public function form_fields() {
+	// 	$fields = array(
+	// 		array(
+	// 			'title' => __( 'Balance', APP_TD ),
+	// 			'type'  => 'text',
+	// 			'name'  => 'hrb_credits',
+	// 			'desc'  => __( 'Credits', APP_TD ),
+	// 			'extra' => array( 'size' => '5', 'class' => 'short-field' ),
+	// 		),
+	// 	);
+	// 	return apply_filters( 'hrb_profile_account_fields', $fields );
+	// }
 }
