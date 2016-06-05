@@ -123,11 +123,11 @@ class APP_Login extends APP_Login_Base {
 		}
 
 		if ( empty( $_POST['log'] ) ) {
-			$this->error->add( 'empty_username', __( '<strong>ERROR</strong>: The username field is empty.', APP_TD ) );
+			$this->error->add( 'empty_username', __( '<strong>ERROR</strong>: El campo de usuario esta vacio.', APP_TD ) );
 		}
 
 		if ( empty( $_POST['pwd'] ) ) {
-			$this->error->add( 'empty_password', __( '<strong>ERROR</strong>: The password field is empty.', APP_TD ) );
+			$this->error->add( 'empty_password', __( '<strong>ERROR</strong>: El campo de contraseña esta vacio.', APP_TD ) );
 		}
 
 		if ( $this->error->get_error_code() ) {
@@ -166,26 +166,26 @@ class APP_Login extends APP_Login_Base {
 		}
 
 		if ( isset( $_POST['testcookie'] ) && empty( $_COOKIE[ TEST_COOKIE ] ) ) {
-			$this->error->add( 'test_cookie', __( 'Cookies are blocked or not supported by your browser. You must enable cookies to continue.', APP_TD ) );
+			$this->error->add( 'test_cookie', __( 'Las cookies están bloqueadas o no soportadas por tu navegador', APP_TD ) );
 		}
 
 		if ( isset( $_GET['loggedout'] ) && true == $_GET['loggedout'] ) {
-			$message = __( 'You are now logged out.', APP_TD );
+			$message = __( 'Cerraste sesión con éxito', APP_TD );
 
 		} elseif ( isset( $_GET['registration'] ) && 'disabled' == $_GET['registration'] ) {
-			$this->error->add( 'registerdisabled', __( 'User registration is currently not allowed.', APP_TD ) );
+			$this->error->add( 'registerdisabled', __( 'El registro de usuarios no esta activo por el momento', APP_TD ) );
 
 		} elseif ( isset( $_GET['checkemail'] ) && 'confirm' == $_GET['checkemail'] ) {
-			$message = __( 'Check your email for the confirmation link.', APP_TD );
+			$message = __( 'Revisa tu correo, para ver el link de confirmación', APP_TD );
 
 		} elseif ( isset( $_GET['checkemail'] ) && 'newpass' == $_GET['checkemail'] ) {
-			$message = __( 'Check your email for your new password.', APP_TD );
+			$message = __( 'Revisa tu correo, para obtener tu nueva contraseña', APP_TD );
 
 		} elseif ( isset( $_GET['checkemail'] ) && 'registered' == $_GET['checkemail'] ) {
-			$message = __( 'Registration complete. Please check your e-mail.', APP_TD );
+			$message = __( 'Registro completo, por favor revisa tu correo', APP_TD );
 
 		} elseif ( isset( $_GET['action'] ) && 'lostpassword' == $_GET['action'] && ! empty( $_GET['success'] ) ) {
-			$message = __( 'Your password has been reset. Please login.', APP_TD );
+			$message = __( 'Tu contraseña ha sido reseteada, por favor ingresa con tu nueva contraseña ', APP_TD );
 		}
 
 		if ( $transient_notice = appthemes_get_visitor_transient( 'login_notice' ) ) {
@@ -248,7 +248,7 @@ class APP_Password_Recovery extends APP_Login_Base {
 	function notices() {
 
 		if ( isset( $_GET['invalidkeyerror'] ) && '1' == $_GET['invalidkeyerror'] ) {
-			appthemes_display_notice( 'error', __( 'Sorry, that key does not appear to be valid. Please try again.', APP_TD ) );
+			appthemes_display_notice( 'error', __( 'Lo sentimos, el enlace no parece valido, intentalo de nuevo', APP_TD ) );
 		}
 
 		if ( isset( $this->error ) && sizeof( $this->error ) > 0 && $this->error->get_error_code() ) {
@@ -267,11 +267,11 @@ class APP_Password_Recovery extends APP_Login_Base {
 		$errors = new WP_Error();
 
 		if ( empty( $_POST['user_login'] ) ) {
-			$errors->add( 'empty_username', __( '<strong>ERROR</strong>: Enter a username or e-mail address.', APP_TD ) );
+			$errors->add( 'empty_username', __( '<strong>ERROR</strong>: Ingresa tu nombre de usuario o correo electronico', APP_TD ) );
 		} else if ( strpos( $_POST['user_login'], '@' ) ) {
 			$user_data = get_user_by( 'email', trim( $_POST['user_login'] ) );
 			if ( empty( $user_data ) ) {
-				$errors->add( 'invalid_email', __( '<strong>ERROR</strong>: There is no user registered with that email address.', APP_TD ) );
+				$errors->add( 'invalid_email', __( '<strong>ERROR</strong>: No hay usuarios registrados con ese correo electronico', APP_TD ) );
 			}
 		} else {
 			$login = trim( $_POST['user_login'] );
@@ -285,7 +285,7 @@ class APP_Password_Recovery extends APP_Login_Base {
 		}
 
 		if ( ! $user_data ) {
-			$errors->add( 'invalidcombo', __( '<strong>ERROR</strong>: Invalid username or e-mail.', APP_TD ) );
+			$errors->add( 'invalidcombo', __( '<strong>ERROR</strong>: nombre de usuario o email invalidos', APP_TD ) );
 			return $errors;
 		}
 
@@ -537,22 +537,22 @@ class APP_Registration extends APP_Login_Base {
 
 		// Check the username
 		if ( $sanitized_user_login == '' ) {
-			$errors->add( 'empty_username', __( '<strong>ERROR</strong>: Please enter a username.', APP_TD ) );
+			$errors->add( 'empty_username', __( '<strong>ERROR</strong>: Por favor ingresa tu nombre de usuario', APP_TD ) );
 		} elseif ( ! validate_username( $posted['user_login'] ) ) {
-			$errors->add( 'invalid_username', __( '<strong>ERROR</strong>: This username is invalid because it uses illegal characters. Please enter a valid username.', APP_TD ) );
+			$errors->add( 'invalid_username', __( '<strong>ERROR</strong>: El nombre elegido tiene caracteres invalidos', APP_TD ) );
 			$sanitized_user_login = '';
 		} elseif ( username_exists( $sanitized_user_login ) ) {
-			$errors->add( 'username_exists', __( '<strong>ERROR</strong>: This username is already registered, please choose another one.', APP_TD ) );
+			$errors->add( 'username_exists', __( '<strong>ERROR</strong>: El nombre de usuario elegido ya existe, intenta con otro nombre', APP_TD ) );
 		}
 
 		// Check the e-mail address
 		if ( $user_email == '' ) {
-			$errors->add( 'empty_email', __( '<strong>ERROR</strong>: Please type your e-mail address.', APP_TD ) );
+			$errors->add( 'empty_email', __( '<strong>ERROR</strong>: Ingresa tu correo electrónico', APP_TD ) );
 		} elseif ( ! is_email( $user_email ) ) {
-			$errors->add( 'invalid_email', __( '<strong>ERROR</strong>: The email address isn&#8217;t correct.', APP_TD ) );
+			$errors->add( 'invalid_email', __( '<strong>ERROR</strong>: El correo electronico no es correcto', APP_TD ) );
 			$user_email = '';
 		} elseif ( email_exists( $user_email ) ) {
-			$errors->add( 'email_exists', __( '<strong>ERROR</strong>: This email is already registered, please choose another one.', APP_TD ) );
+			$errors->add( 'email_exists', __( '<strong>ERROR</strong>: El email ingresado ya esta en uso', APP_TD ) );
 		}
 
 		do_action( 'register_post', $sanitized_user_login, $user_email, $errors );
@@ -566,11 +566,11 @@ class APP_Registration extends APP_Login_Base {
 
 		if ( $show_password_fields ) {
 			if ( empty( $posted['pass1'] ) )	{
-				$errors->add( 'empty_password', __( '<strong>ERROR</strong>: Please enter a password.', APP_TD ) );
+				$errors->add( 'empty_password', __( '<strong>ERROR</strong>: Ingresa la contraseña', APP_TD ) );
 			} elseif ( empty( $posted['pass2'] ) ) {
-				$errors->add( 'empty_password', __( '<strong>ERROR</strong>: Please enter the password twice.', APP_TD ) );
+				$errors->add( 'empty_password', __( '<strong>ERROR</strong>: Ingresa la contraseña en los 2 campos', APP_TD ) );
 			} elseif ( ! empty( $posted['pass1'] ) && $posted['pass1'] != $posted['pass2'] ) {
-				$errors->add( 'password_mismatch', __( '<strong>ERROR</strong>: The passwords do not match.', APP_TD ) );
+				$errors->add( 'password_mismatch', __( '<strong>ERROR</strong>: Las contraseñas no coinciden', APP_TD ) );
 			}
 		}
 
@@ -601,7 +601,7 @@ class APP_Registration extends APP_Login_Base {
 
 		// something went wrong captain
 		if ( ! $user_id ) {
-			$errors->add( 'registerfail', sprintf( __( '<strong>ERROR</strong>: Couldn&#39;t register you... please contact the <a href="mailto:%s">webmaster</a> !', APP_TD ), get_option( 'admin_email' ) ) );
+			$errors->add( 'registerfail', sprintf( __( '<strong>ERROR</strong>: No fue posible hacer tu registro... por favor <a href="mailto:%s">Contáctanos</a> !', APP_TD ), get_option( 'admin_email' ) ) );
 
 			if ( $errors->get_error_code() ) {
 				$this->error = $errors;

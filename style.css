@@ -6055,3 +6055,8 @@ h1,h2,h3 {
 .project > h2:hover, .dashboard .project-title-row:hover, .project-secondary .project-title-row:hover, .dashboard .order-title-row:hover {
     background-color: #757575;
 }
+
+#pass-strength-result {
+    background-color: #00BFBF;
+    color: #fff;
+}
