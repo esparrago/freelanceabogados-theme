@@ -29,7 +29,7 @@
 					</div>
 					
 					<div class="large-6 columns form-field" >
-						<label><?php _e( 'Repite contraseña:', APP_TD ); ?></label>
+						<label><?php _e( 'Confirmar contraseña:', APP_TD ); ?></label>
 						<input tabindex="4" type="password" class="text required" name="pass2" id="pass2" value="" autocomplete="off" />
 					</div>
 				</div>
@@ -37,18 +37,18 @@
 				<div class="row">
 					<div class="large-12 columns form-field">
 						<div id="pass-strength-result" class="hide-if-no-js"><?php _e( 'Strength indicator', APP_TD ); ?></div>
-						<p class="description indicator-hint"><?php _e( 'Consejo: La clave debe ser minimo de caracteres. para hacerla mas segura usa mayusculas, minusculas  y caracteres como ! " ? $ % ^ &amp; ).', APP_TD ); ?></p>
+						<p class="description indicator-hint"><?php _e( 'Consejo: La clave debe ser mínimo de 6 caracteres. Para hacerla mas segura usa mayúsculas, minúsculas y símbolos como ! " ? $ % ^ & ).', APP_TD ); ?></p>
 					</div>
 				</div>
 
-				<h4><?php echo __( 'Que eres', APP_TD ); ?></h4>
+				<h4><?php echo __( 'Quiero:', APP_TD ); ?></h4>
 
 				<div class="row">
 					<div class="large-4 small-12 columns form-field user-role-type">
 
 						<select name="role">
-							<option value="<?php echo esc_attr( HRB_ROLE_EMPLOYER ); ?>" selected="selected"><?php echo __( 'Cliente', APP_TD ); ?></option>
-							<option value="<?php echo esc_attr( HRB_ROLE_FREELANCER ); ?>"><?php echo __( 'Abogado', APP_TD ); ?></option>
+							<option value="<?php echo esc_attr( HRB_ROLE_EMPLOYER ); ?>" selected="selected"><?php echo __( 'Encontrar un abogado', APP_TD ); ?></option>
+							<option value="<?php echo esc_attr( HRB_ROLE_FREELANCER ); ?>"><?php echo __( 'Encontrar trabajo', APP_TD ); ?></option>
 							<?php if ( $hrb_options->share_roles_caps ): ?>
 								<option value="<?php echo esc_attr( HRB_ROLE_BOTH ); ?>"/> <?php echo __( 'Both', APP_TD ) ?></option>
 							<?php endif; ?>
@@ -61,7 +61,7 @@
 
 				<div class="form-field">
 					<?php echo HRB_Login_Registration::redirect_field(); ?>
-					<input tabindex="30" type="submit" class="btn reg" id="register" name="register" value="<?php _e( 'Registrar', APP_TD ); ?>" />
+					<input tabindex="30" type="submit" class="btn reg" id="register" name="register" value="<?php _e( 'Registrate', APP_TD ); ?>" />
 				</div>
 
 			</fieldset>

@@ -496,6 +496,7 @@ i.i-featured {
 
 #site-title {
 	margin: 0;
+    margin-top: -7px;
 }
 
 #site-title a {
@@ -638,8 +639,9 @@ input.search {
 
 .top-bar-section .inbox {
 	background-color: #f2505f;
-	color: #fff;
-	padding: 0 6px;
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 4px;
 }
 
 /* social menu */

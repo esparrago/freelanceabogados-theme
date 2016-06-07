@@ -67,11 +67,11 @@
 			   <span><?php the_hrb_user_rating( $dashboard_user, __( 'n/a', APP_TD ) ); ?></span>
 		   </li>
 		   <li class="projects-current">
-			   <?php echo __( 'Consultas Activas', APP_TD ); ?>
+			   <?php echo __( 'Consultas activas', APP_TD ); ?>
 			   <span><?php the_hrb_user_related_active_projects_count( $dashboard_user ); ?></span>
 		   </li>
 		   <li class="projects-complete">
-			   <?php echo __( 'Consultas Completadas', APP_TD ); ?>
+			   <?php echo __( 'Consultas completadas', APP_TD ); ?>
 			   <span><?php the_hrb_user_completed_projects_count( $dashboard_user ); ?></span>
 		   </li>
 		   <li class="reviews-received">
@@ -79,7 +79,7 @@
 			   <span><?php the_hrb_user_total_reviews( $dashboard_user ); ?></span>
 		   </li>
 		   <li class="reviews-given">
-			   <?php echo __( 'Reseñas hechas', APP_TD ); ?>
+			   <?php echo __( 'Reseñas realizadas', APP_TD ); ?>
 			   <span><?php the_hrb_user_total_authored_reviews( $dashboard_user ); ?></span>
 		   </li>
 		   <li class="reviews-success_rate">

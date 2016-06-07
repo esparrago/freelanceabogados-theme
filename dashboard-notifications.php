@@ -53,7 +53,7 @@
 								<td>
 									<?php if ( $notification->action ): ?>
 										<div class="notification-action">
-											<a data-tooltip title="<?php echo __( 'View', APP_TD ); ?>" class="button tiny" href="<?php echo esc_url( $notification->action ); ?>"><i class="icon i-view"></i></a>
+											<a data-tooltip title="<?php echo __( 'Ver', APP_TD ); ?>" class="button tiny" href="<?php echo esc_url( $notification->action ); ?>"><i class="icon i-view"></i></a>
 										</div>
 									<?php endif; ?>
 								</td>

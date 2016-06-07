@@ -118,7 +118,7 @@
    	                <div class="col-lg-offset-3 col-lg-6 col-sm-12 text-center wow fadeInUp">
                           <img class="logo-circle" src="<?php bloginfo('stylesheet_directory'); ?>/images/fa_Logosimbolo.png">
    	                    <h2 class="section-heading text-center">DERECHO SIN CORBATA</h2>
-   	                    <p class="lead justify">Somos una PLATAFORMA DE CROWDSOURCING Online que conecta abogados y clientes en un mismo escenario con la finalidad de proveer soluciones JURÍDICAS prácticas, sencillas y rápidas provenientes de una Creemos en soluciones legales eficientes a un precio razonable, sin nueva generación de ABOGADOS modernos, precisos, determinados e independientes. tramitología ni perdida de tiempo.</p>
+   	                    <p class="lead justify"Somos una <strong>plataforma de crowdsourcing online</strong> que conecta abogados y clientes en un mismo escenario con la finalidad de proveer <strong>soluciones jurídicas</strong> prácticas, sencillas y rápidas provenientes de una nueva generación de <strong>abogados</strong> modernos, precisos, determinados e independientes. Creemos en soluciones legales eficientes a un precio razonable, sin tramitología ni perdida de tiempo.</p>
                           <br>
    	                     <a href="wp-login.php?action=register" class="btn btn-success btn-lg btn-txt-black"> <span class="network-name">!Empieza gratis hoy!</span></a>
    	                </div>

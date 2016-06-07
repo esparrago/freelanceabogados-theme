@@ -190,11 +190,11 @@
 
 			<?php if ( current_user_can( 'edit_projects') ): ?>
 
-					<h5 class="no-results"><?php echo sprintf( __( 'No projects found. Click <a href="%s">here</a> to post a project now.', APP_TD ), esc_url( get_the_hrb_project_create_url() ) ); ?></h5>
+					<h5 class="no-results"><?php echo sprintf( __( 'No hay proyectos nuevos. Publica un nuevo proyecto <a href="%s">aquí</a>', APP_TD ), esc_url( get_the_hrb_project_create_url() ) ); ?></h5>
 
 			<?php else: ?>
 
-					<h5 class="no-results"><?php echo __( 'No projects found.', APP_TD ); ?></h5>
+					<h5 class="no-results"><?php echo __( 'No hay proyectos nuevos.', APP_TD ); ?></h5>
 
 			<?php endif; ?>
 

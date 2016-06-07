@@ -22,15 +22,15 @@ function hrb_maybe_warn_no_public_email() {
 		$profile_link = html_link( appthemes_get_edit_profile_url(), __( 'Actualizar perfil', APP_TD ) );
 
 		if ( user_can( $user->ID, 'edit_projects' ) && user_can( $user->ID, 'edit_bids' ) ) {
-			appthemes_display_notice( 'warning', sprintf( __( '<strong>Nota:</strong> Antes de aceptar o aplicar a un proyecto, tienes que proporcionar un email público. </br> %s.', APP_TD ), $profile_link ) );
+			appthemes_display_notice( 'warning', sprintf( __( '<strong>Nota:</strong> Antes de aceptar o aplicar a un proyecto, tienes que proporcionar un correo electrónico público. </br> %s.', APP_TD ), $profile_link ) );
 		} else {
 
 			if ( user_can( $user->ID, 'edit_projects' ) ) {
-				appthemes_display_notice( 'success', sprintf( __( 'Note: Before you agree on a project you\'ll need to provide a public email. %s.', APP_TD ), $profile_link ) );
+				appthemes_display_notice( 'success', sprintf( __( '<strong>Nota:</strong> Antes de aceptar o aplicar a un proyecto, tienes que proporcionar un correo electrónico público. </br> %s.', APP_TD ), $profile_link ) );
 			}
 
 			if ( user_can( $user->ID, 'edit_bids' ) ) {
-				appthemes_display_notice( 'success', sprintf( __( 'Note: Before applying to projects you\'ll need to provide a public email. %s.', APP_TD ), $profile_link ) );
+				appthemes_display_notice( 'success', sprintf( __( '<strong>Nota:</strong> Antes de aceptar o aplicar a un proyecto, tienes que proporcionar un correo electrónico público. </br> %s.', APP_TD ), $profile_link ) );
 			}
 
 		}
@@ -558,7 +558,7 @@ function _hrb_dashboard_project_actions_atts( $actions, $post ) {
 		'reopen' => array(
 			'title' => __( 'Re-Open', APP_TD ),
 			'href' => get_the_hrb_project_action_url( $post->ID, 'reopen' ),
-			'onclick' => 'return confirm("' . __( 'Are you sure you want to Re-Open this project?', APP_TD ) . '");',
+			'onclick' => 'return confirm("' . __( 'Estas seguro que quieres re abrir esta consulta?', APP_TD ) . '");',
 		),
 		'continue' => array(
 			'title' => __( 'Continue', APP_TD ),
@@ -567,22 +567,22 @@ function _hrb_dashboard_project_actions_atts( $actions, $post ) {
 		'end' => array(
 			'title' => __( 'End', APP_TD ),
 			'href' => get_the_hrb_project_action_url( $post->ID, 'cancel' ),
-			'onclick' => 'return confirm("' . __( 'Are you sure you want to end this project?', APP_TD ) . '");',
+			'onclick' => 'return confirm("' . __( 'Estas seguro que quieres terminar esta consulta?', APP_TD ) . '");',
 		),
 		'cancel' => array(
 			'title' => __( 'Cancel', APP_TD ),
 			'href' => get_the_hrb_project_action_url( $post->ID, 'cancel' ),
-			'onclick' => 'return confirm("' . __( 'Are you sure you want to cancel this project?', APP_TD ) . '");',
+			'onclick' => 'return confirm("' . __( 'Estas seguro que quieres cancelar esta consulta?', APP_TD ) . '");',
 		),
 		'trash' => array(
 			'title' => __( 'Delete', APP_TD ),
 			'href' => get_the_hrb_project_action_url( $post->ID, 'delete' ),
-			'onclick' => 'return confirm("' . __( 'Are you sure you want to delete this project?', APP_TD ) . '");',
+			'onclick' => 'return confirm("' . __( 'Estas seguro que quieres eliminar esta consulta?', APP_TD ) . '");',
 		),
 		'archive' => array(
 			'title' => __( 'Archive', APP_TD ),
 			'href' => get_the_hrb_project_action_url( $post->ID, 'archive' ),
-			'onclick' => 'return confirm("' . __( 'Are you sure you want to archive this project?', APP_TD ) . '");',
+			'onclick' => 'return confirm("' . __( 'Estas seguro que quieres archivar esta consulta?', APP_TD ) . '");',
 		),
 		'apply' => array(
 			'title' => __( 'Apply', APP_TD ),
@@ -853,7 +853,7 @@ function _hrb_dashboard_proposal_actions_atts( $actions, $proposal ) {
 		'cancel' => array(
 			'title' => __( 'Cancel', APP_TD ),
 			'href' => get_the_hrb_proposal_action_url( $proposal->get_id(), 'cancel' ),
-			'onclick' => 'return confirm("' . __( 'Are you sure you want to cancel this proposal? Proposal will be discarded.', APP_TD ) . '");',
+			'onclick' => 'return confirm("' . __( 'Estas seguro que quieres eliminar tu propuesta?', APP_TD ) . '");',
 		),
 		'view_proposal' => array(
 			'title' => __( 'View Proposal', APP_TD ),

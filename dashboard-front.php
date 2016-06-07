@@ -1,4 +1,4 @@
-<h2><i class="icon i-activity"></i><?php echo __( 'Your Recent Activity', APP_TD  ); ?></h2>
+<h2><i class="icon i-activity"></i><?php echo __( 'Actividad reciente', APP_TD  ); ?></h2>
 
 	<div class="row activity-wrapper">
 		<div class="large-12 columns activity">
@@ -18,7 +18,7 @@
 								<?php if ( $notification->action ): ?>
 
 									<div class="large-3 small-3 columns notification-action">
-										<a data-tooltip title="<?php echo __( 'View', APP_TD ); ?>" class="button tiny right" href="<?php echo esc_url( $notification->action ); ?>"><i class="icon i-view"></i></a>
+										<a data-tooltip title="<?php echo __( 'Ver', APP_TD ); ?>" class="button tiny right" href="<?php echo esc_url( $notification->action ); ?>"><i class="icon i-view"></i></a>
 									</div>
 
 								<?php endif; ?>
@@ -30,11 +30,11 @@
 
 				<?php endforeach; ?>
 
-				<a class="button primary small" href="<?php echo esc_url( hrb_get_dashboard_url_for('notifications') ); ?>"><?php echo __( 'View All', APP_TD ); ?></a>
+				<a class="button primary small" href="<?php echo esc_url( hrb_get_dashboard_url_for('notifications') ); ?>"><?php echo __( 'Ver todo', APP_TD ); ?></a>
 
 			<?php else: ?>
 
-				<h5 class="no-results"><?php echo __( 'Sorry, nothing new to show.', APP_TD ); ?></h5>
+				<h5 class="no-results"><?php echo __( 'Nada nuevo que mostrar', APP_TD ); ?></h5>
 
 			<?php endif; ?>
 

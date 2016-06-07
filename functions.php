@@ -323,3 +323,32 @@ APP_Mail_From::init();
 ### Init
 
 appthemes_init();
+
+
+add_filter('gettext', 'translate_text'); 
+add_filter('ngettext', 'translate_text');
+
+function translate_text($translated) {
+$translated = str_ireplace('Strength indicator', 'Nivel de seguridad', $translated);
+$translated = str_ireplace('Very Weak', 'Muy bajo', $translated); 
+$translated = str_ireplace('Weak', 'Bajo', $translated);
+$translated = str_ireplace('Medium', 'Medio', $translated);
+$translated = str_ireplace('Strong', 'Segura', $translated);
+$translated = str_ireplace('Very Strong', 'Muy Segura', $translated);
+$translated = str_ireplace('browsing', 'Resultados', $translated);
+$translated = str_ireplace('No Proposals Yet', 'No hay propuestas todavia', $translated);
+$translated = str_ireplace('Edit project', 'Editar consulta', $translated);
+$translated = str_ireplace('add media', 'Agregar archivos', $translated);
+$translated = str_ireplace('No media added yet', 'No se han agregado archivos', $translated);
+$translated = str_ireplace('fichero', 'archivo', $translated);
+$translated = str_ireplace('Maximum upload file size', 'Tamaño máximo por archivo', $translated);
+$translated = str_ireplace('Allowed files', 'archivos permitidos', $translated);
+$translated = str_ireplace('Insertar en la entrada', 'Agregar', $translated);
+
+
+
+
+
+
+return $translated; 
+}

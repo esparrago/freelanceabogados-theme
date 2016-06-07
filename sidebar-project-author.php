@@ -17,13 +17,13 @@
 		<div class="row user-projects-stats">
 			<div class="small-6 large-6 columns active-projects">
 				<span>
-					<i class="icon i-active-projects"></i><small><?php echo __( 'Consultas Activas: ', APP_TD ); ?></small>
+					<i class="icon i-active-projects"></i><small><?php echo __( 'Consultas activas: ', APP_TD ); ?></small>
 					<?php echo the_hrb_user_related_active_projects_count( $user ); ?>
 				</span>
 			</div>
 			<div class="small-6 large-6 columns completed-projects">
 				<span>
-					<i class="icon i-completed-projects"></i><small><?php echo __( 'Consultas Completadas: ', APP_TD ); ?></small>
+					<i class="icon i-completed-projects"></i><small><?php echo __( 'Consultas completadas: ', APP_TD ); ?></small>
 					<?php echo the_hrb_user_completed_projects_count( $user );  ?>
 				</span>
 			</div>

@@ -134,7 +134,7 @@ class HRB_User_Dashboard extends APP_View {
 	}
 
 	function title() {
-		return __( 'Dashboard', APP_TD );
+		return __( 'Tablero', APP_TD );
 	}
 
 }
@@ -272,7 +272,7 @@ class HRB_User_Dashboard_Notifications extends HRB_User_Dashboard {
 	}
 
 	function title() {
-		return __( 'Dashboard', APP_TD );
+		return __( 'Tablero', APP_TD );
 	}
 }
 

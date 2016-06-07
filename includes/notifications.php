@@ -139,21 +139,21 @@ function hrb_new_project_notify_author( $post_id, $order = '' ) {
 	$project_link = html_link( get_permalink( $post ), $post->post_title );
 
 	$content = sprintf(
-		__( 'Hello %2$s, %1$s
-		your project %3$s was submitted with success.', APP_TD ), "\r\n\r\n", $recipient->display_name, $project_link
+		__( 'Hola %2$s, %1$s
+		Tu consulta %3$s fue publicada con éxito.', APP_TD ), "\r\n\r\n", $recipient->display_name, $project_link
 	);
 
 	if ( ! empty( $order ) && $order->get_total() > 0 ) {
 
-		$subject = sprintf( __( "Your project - %s - was submitted and is waiting payment", APP_TD ), $project_link );
+		/*$subject = sprintf( __( "Tu consulta - %s - was submitted and is waiting payment", APP_TD ), $project_link );
 		$content .= _hrb_order_summary_email_body( $order );
-		$content .= "\r\n\r\n" . __( "The Order is waiting payment. You'll be notified once the payment clears.", APP_TD );
+		$content .= "\r\n\r\n" . __( "The Order is waiting payment. You'll be notified once the payment clears.", APP_TD );*/
 
 	} else {
 
 		if ( 'pending' == $post->post_status ) {
-			$subject = sprintf( __( "Your project - %s - was submitted and is waiting moderation", APP_TD ), $project_link );
-			$content .= "\r\n\r\n" . __( "It's waiting moderation. You'll be notified once it is approved.", APP_TD );
+			/*$subject = sprintf( __( "Tu  - %s - was submitted and is waiting moderation", APP_TD ), $project_link );
+			$content .= "\r\n\r\n" . __( "It's waiting moderation. You'll be notified once it is approved.", APP_TD );*/
 		} else {
 			$subject = sprintf( __( "Tu consulta - %s - fue publicada", APP_TD ), $project_link );
 			$content .= "\r\n\r\n" . __( "es pubica en nuestro sitio", APP_TD );
@@ -185,11 +185,11 @@ function hrb_project_approval_notify( $post ) {
 
 	$project_link = html_link( get_permalink( $post ), $post->post_title );
 
-	$subject_message = sprintf( __( "Your project - %s - has been approved!", APP_TD ), $project_link );
+	$subject_message = sprintf( __( "Tu  - %s - has been approved!", APP_TD ), $project_link );
 
 	$content = sprintf(
 		__( 'Hello %2$s, %1$s
-		your project %3$s, has been approved and is now live!', APP_TD ), "\r\n\r\n", $recipient->display_name, $project_link
+		Tu consulta %3$s, has been approved and is now live!', APP_TD ), "\r\n\r\n", $recipient->display_name, $project_link
 	);
 
 	$participant = array(
@@ -218,11 +218,11 @@ function hrb_project_expired_notify( $post ) {
 	$project_link = html_link( get_permalink( $post ), $post->post_title );
 	$renew_link = html_link( get_the_hrb_project_relist_url( $post->ID ), __( 'Relist Project', APP_TD ) );
 
-	$subject_message = sprintf( __( "Your project - %s - has expired", APP_TD ), $project_link );
+	$subject_message = sprintf( __( "Tu consulta - %s - has expired", APP_TD ), $project_link );
 
 	$content = sprintf(
 		__( 'Hello %2$s, %1$s
-		your project %3$s, has expired (it is not visible to the public anymore).%1$s %4$s', APP_TD ),
+		Tu consulta %3$s, has expired (it is not visible to the public anymore).%1$s %4$s', APP_TD ),
 		"\r\n\r\n", $recipient->display_name, $project_link, $renew_link
 	);
 
@@ -257,21 +257,21 @@ function hrb_status_change_notify_parties( $post, $status, $old_status = '' ) {
 
 	switch( $status) {
 		case HRB_PROJECT_STATUS_CANCELED:
-			$status_desc = __( 'Fue cancelado', APP_TD );
+			$status_desc = __( 'se canceló', APP_TD );
 			$notify_candidates = $notify_participants = true;
 			break;
 		case HRB_PROJECT_STATUS_CANCELED_TERMS:
-			$status_desc = __( 'is pending new candidate selection', APP_TD );
+			$status_desc = __( 'está pendiente', APP_TD );
 			break;
 		case HRB_PROJECT_STATUS_EXPIRED:
-			$status_desc = __( 'has expired', APP_TD );
+			$status_desc = __( 'se venció', APP_TD );
 			break;
 		case 'publish':
 			if ( 'publish' != $old_status ) {
-				$status_desc = __( 'was reopened', APP_TD );
+				$status_desc = __( 'se re abrió', APP_TD );
 				$notify_candidates = true;
 			} else {
-				$status_desc = __( 'was updated', APP_TD );
+				$status_desc = __( 'se actualizó', APP_TD );
 				$notify_candidates = $notify_participants = true;
 			}
 			break;
@@ -287,11 +287,11 @@ function hrb_status_change_notify_parties( $post, $status, $old_status = '' ) {
 
 	} else {
 
-		$subject_message = sprintf( __( 'Your project - %1$s - %2$s', APP_TD ), $project_link, $status_desc );
+		$subject_message = sprintf( __( 'Tu consulta - %1$s - %2$s', APP_TD ), $project_link, $status_desc );
 
 		$content = sprintf(
 			__( 'Hello %2$s, %1$s
-			your project %3$s, %4$s.', APP_TD ),
+			Tu consulta %3$s, %4$s.', APP_TD ),
 			"\r\n\r\n", $recipient->display_name, $project_link, $status_desc
 		);
 
@@ -626,7 +626,7 @@ function hrb_work_status_notify_parties( $new_status, $old_status, $workspace_id
 
 	### notify employer
 
-	$subject_message = sprintf( __( 'User %1$s, working on - %2$s - has updated his %3$s to \'%4$s\'', APP_TD ), $worker->display_name, $project_link, $work_status_link, $status );
+	$subject_message = sprintf( __( 'El usuario %1$s, que esta trabajando en - %2$s - has updated his %3$s to \'%4$s\'', APP_TD ), $worker->display_name, $project_link, $work_status_link, $status );
 
 	$content = sprintf(
 		__( 'Hello %2$s,%1$s
@@ -743,7 +743,7 @@ function hrb_proposal_canceled_notify_parties( $proposal ) {
 
 	### notify sender
 
-	$subject_message = sprintf( __( "Your proposal for - %s - was canceled", APP_TD ), $project_link );
+	$subject_message = sprintf( __( "Tu propuesta para - %s - fue cancelada", APP_TD ), $project_link );
 
 	$content = sprintf(
 		__( 'Hello %2$s,%1$s
@@ -787,7 +787,7 @@ function hrb_agreement_notify_parties( $proposal, $user, $workspace_id ) {
 
 	### notify candidate
 
-	$subject_message = sprintf( __( 'Project - %1$s - from %2$s was assigned to you!', APP_TD ), $project_link, $employer->display_name );
+	$subject_message = sprintf( __( 'La consulta - %1$s - de %2$s te fue asignada', APP_TD ), $project_link, $employer->display_name );
 
 	$content = sprintf(
 		__( 'Hello %2$s,%1$s
@@ -814,7 +814,7 @@ function hrb_agreement_notify_parties( $proposal, $user, $workspace_id ) {
 
 	### notify sender
 
-	$subject_message = sprintf( __( 'Your project - %1$s - was assigned to %2$s!', APP_TD ), $project_link, $candidate->display_name );
+	$subject_message = sprintf( __( 'Tu consulta - %1$s - was assigned to %2$s!', APP_TD ), $project_link, $candidate->display_name );
 
 	$content = sprintf(
 		__( 'Hello %2$s,%1$s

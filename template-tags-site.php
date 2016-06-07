@@ -373,7 +373,7 @@ function get_the_hrb_user_nav_links() {
 				'class' => 'icon i-favorites',
 			),*/
 			'notifications' => array(
-				'name' => __( 'Notifications', APP_TD ) . sprintf( ' <span class="inbox">%d</span>', appthemes_get_user_total_unread_notifications( $current_user->ID ) ),
+				'name' => __( 'Notificaciones', APP_TD ) . sprintf( ' <span class="inbox">%d</span>', appthemes_get_user_total_unread_notifications( $current_user->ID ) ),
 				'url' => hrb_get_dashboard_url_for('notifications'),
 				'class' => '',
 			),
@@ -384,7 +384,7 @@ function get_the_hrb_user_nav_links() {
 				'title' => __( 'Rating', APP_TD ),
 			),
 			'user' => array(
-				'name' => sprintf( __( 'Hi, %s', APP_TD ), $current_user->display_name ),
+				'name' => sprintf( __( 'Hola, %s', APP_TD ), $current_user->display_name ),
 				'url' => hrb_get_dashboard_url_for(),
 				'align' => 'left',
 				'class' => 'icon i-dashboard',
@@ -424,7 +424,7 @@ function the_hrb_user_nav_links() {
 
 	if ( is_user_logged_in() ) {
 
-		$logout_html = html( 'i', array( 'class' => 'logout icon i-logout'), '&nbsp;' ) . __(  'Logout', APP_TD );
+		$logout_html = html( 'i', array( 'class' => 'logout icon i-logout'), '&nbsp;' ) . __(  ' Cerrar sesión', APP_TD );
 
 		echo html( 'li', html( 'a', array( 'href' => wp_logout_url() ), $logout_html ) );
 	}

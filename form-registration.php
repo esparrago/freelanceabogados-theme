@@ -1,4 +1,4 @@
-<div id="main" class="large-8 columns">
+<div id="main" class="large-8  large-offset-2 columns">
 	<div class="row form-wrapper register">
 		<div class="large-12 columns">
 
@@ -16,8 +16,13 @@
 	</div>
 </div>
 
+<?php
+/* 
 <div id="sidebar" class="large-4 columns">
 	<div class="sidebar-widget-wrap cf">
 	<?php get_sidebar( app_template_base() ); ?>
 	</div><!-- end .sidebar-widget-wrap -->
 </div><!-- end #sidebar -->
+
+/*
+?>

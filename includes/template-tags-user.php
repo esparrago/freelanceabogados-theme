@@ -240,7 +240,7 @@ function get_the_hrb_user_rate( $user = '' ) {
  * Outputs the formatted user price rate.
  */
 function the_hrb_user_rate( $user = '', $before = '', $after = '' ) {
-	echo $before . sprintf( __( '<span>%s</span> per hour', APP_TD ), get_the_hrb_user_rate( $user ) ) . $after;
+	echo $before . sprintf( __( '<span>%s</span> Por hora', APP_TD ), get_the_hrb_user_rate( $user ) ) . $after;
 }
 
 /**
@@ -249,7 +249,7 @@ function the_hrb_user_rate( $user = '', $before = '', $after = '' ) {
 function get_the_hrb_user_location( $user = '' ) {
 	$user = get_the_hrb_userdata( $user );
 
-	return $user->hrb_location ? $user->hrb_location : __( 'n/a', APP_TD );
+	return $user->hrb_location ? $user->hrb_location : __( '', APP_TD );
 }
 
 /**
@@ -415,7 +415,7 @@ function the_hrb_user_success_rate( $user = '', $before = '', $after = '', $atts
 	$rate = get_the_hrb_user_success_rate( $user );
 
 	if ( $rate < 0 ) {
-		$rate = __( 'n/a', APP_TD );
+		$rate = __( '-', APP_TD );
 	} else {
 		$rate = sprintf( '%d%%', $rate );
 	}

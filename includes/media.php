@@ -82,8 +82,8 @@ function hrb_gravatar_media_manager( $user_id, $atts, $params = array() ) {
 	$params = wp_parse_args( $params, $defaults );
 
 	$atts_defaults = array(
-		'upload_text' => __( 'Avatar...', APP_TD ),
-		'manage_text'    => __( 'Change...', APP_TD ),
+		'upload_text' => __( 'Imagen', APP_TD ),
+		'manage_text'    => __( 'Cambiar', APP_TD ),
 		'no_media_text'  => '',
 		'attachment_params' => array(
 			'show_description' => false,
